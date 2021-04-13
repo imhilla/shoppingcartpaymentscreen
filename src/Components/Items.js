@@ -70,10 +70,11 @@ const AddMin = styled.div`
 `
 
 const SubInfo = styled.p`
-  font-size: 15px;
+  font-size: 13px;
+  color: gray;
 `
 const ItemNameHeader = styled.h1`
-  font-size: 18px;
+  font-size: 15px;
 `
 
 const ItemContainer = styled.div`
@@ -87,7 +88,7 @@ const Wrapper = styled.div`
   align-items: center;
 `
 const Image = styled.img`
-  width: 100px;
+  width: 130px;
   height: auto;
   border-radius: 20px;
   cursor: pointer;
