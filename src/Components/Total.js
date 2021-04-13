@@ -20,7 +20,7 @@ function Total({ subtotal, shipping, taxes, total }) {
       </Container>
 
       <Container>
-        <Header>Total(including tax)</Header>
+        <Header>Total (including tax)</Header>
         <Final>$ {total}</Final>
       </Container>
     </Wrapper>
@@ -29,7 +29,9 @@ function Total({ subtotal, shipping, taxes, total }) {
 
 export default Total
 const MyTotal = styled.div``
-const Final = styled.div``
+const Final = styled.div`
+  font-weight: bold;
+`
 const Header = styled.h1`
   font-size: 15px;
 `
