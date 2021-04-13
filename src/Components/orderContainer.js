@@ -6,6 +6,7 @@ import image1 from '../images/image1.jpg';
 import image2 from '../images/image2.jpg';
 import image3 from '../images/image3.jpg';
 import image4 from '../images/image4.jpg';
+import Total from './Total';
 
 
 function OrderContainer() {
@@ -17,7 +18,7 @@ function OrderContainer() {
         {
           id: 1,
           name: "Alex Vando Mens Dress Shirts",
-          subinformation: "Good quality construction, Easy care: This dress shirt is nicely stitched and detailed.",
+          subinformation: "Good quality construction, Easy care: This dress shirt is nicely stitched and detailed with 100% hypoallergenic synthetic filling.",
           price: "$23.99",
           url: image1
         },
@@ -77,6 +78,7 @@ function OrderContainer() {
       <ItemContainer>
         {items}
       </ItemContainer>
+      <Total />
     </Wrapper>
   )
 }

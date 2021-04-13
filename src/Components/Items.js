@@ -79,12 +79,13 @@ const ItemNameHeader = styled.h1`
 
 const ItemContainer = styled.div`
   padding: 0 10px;
+  text-align: start;
 `
 
 const Wrapper = styled.div`
   display: flex;
   padding: 1em 0;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 `
 const Image = styled.img`
