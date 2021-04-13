@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-// import { PlusCircle } from '@styled-icons/boxicons-regular/PlusCircle';
-// import { MinusCircle } from '@styled-icons/boxicons-regular/MinusCircle';
+import { PlusCircle } from '@styled-icons/boxicons-regular/PlusCircle';
+import { MinusCircle } from '@styled-icons/boxicons-regular/MinusCircle';
+import { Delete } from '@styled-icons/fluentui-system-filled/Delete';
 
 function Items({ url, name, price, subinformation }) {
   const [mynumber, setNumber] = useState(1)
@@ -18,43 +19,54 @@ function Items({ url, name, price, subinformation }) {
         </SubInfo>
       </ItemContainer>
       <AddMin>
-        <MyMinusCircle >-</MyMinusCircle>
+        <MyMinusCircle />
         <Number>{mynumber}</Number>
-        <MyPlusCircle>+</MyPlusCircle>
+        <MyPlusCircle />
       </AddMin>
-      <Price>
-        {price}
-      </Price>
+      <Miniwrapper>
+        <Price>
+          {price}
+        </Price>
+        <Mydelete />
+      </Miniwrapper>
     </Wrapper>
   )
 }
 
 export default Items
-
-const MyMinusCircle = styled.button`
-  height: 20px;
-  width: auto;
-  border-radius: 50%;
-  border: 1px solid gray;
+const Miniwrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  padding: 0 5px;
+`
+const Mydelete = styled(Delete)`
+  height: 20px!important;
+  padding: 0 5px;
 `
 
-const MyPlusCircle = styled.button`
+const MyMinusCircle = styled(MinusCircle)`
   height: 20px;
-  border-radius: 50%;
-  border: 1px solid gray;
-  width: auto;
+`
+
+const MyPlusCircle = styled(PlusCircle)`
+  height: 20px;
 `
 
 const Number = styled.div`
   font-size: 15px;
+  padding: 0 10px;
 `
 
 const Price = styled.div`
-
+  font-size: 18px;
 `
 
 const AddMin = styled.div`
   display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
 `
 
 const SubInfo = styled.p`
@@ -65,12 +77,14 @@ const ItemNameHeader = styled.h1`
 `
 
 const ItemContainer = styled.div`
-
+  padding: 0 10px;
 `
 
 const Wrapper = styled.div`
   display: flex;
   padding: 1em 0;
+  justify-content: center;
+  align-items: center;
 `
 const Image = styled.img`
   width: 100px;
