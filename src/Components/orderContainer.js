@@ -17,21 +17,21 @@ function OrderContainer() {
         {
           id: 1,
           name: "Alex Vando Mens Dress Shirts Regular Fit Long Sleeve Men Shirt",
-          subinformation: "Good quality construction, Easy care: This dress shirt is nicely stitched and detailed, not a lot of hanging threads, and it can be Hand wash or machine wash cold, hold up well after washing.Do not bleach,Tumble dry low,Low iron if necessary.",
+          subinformation: "Good quality construction, Easy care: This dress shirt is nicely stitched and detailed, not a lot of hanging threads.",
           price: "$23.99",
           url: image1
         },
         {
           id: 2,
           name: "Spalding NBA Street Outdoor Basketball",
-          subinformation: "Performance: Durable outdoor rubber cover. Superior control: Deep channel design for easy handles. Inflation: Shipped inflated and we recommend 8 PSI.",
+          subinformation: "Performance: Durable outdoor rubber cover. Superior control: Deep channel design for easy handles..",
           price: "$25.00",
           url: image2
         },
         {
           id: 3,
-          name: "HP Chromebook 14-inch HD Laptop, Intel Celeron N4000, 4 GB RAM, 32 GB eMMC, Chrome (14a-na0020nr, Ceramic White)",
-          subinformation: "Google play store: The millions of Android apps you know and love on your phone and tablet can now run on your Chrome device without compromising their speed, simplicity or security.",
+          name: "HP Chromebook 14-inch HD Laptop, Intel Celeron N4000, 4 GB RAM, 32 GB eMMC, Chrome",
+          subinformation: "Google play store: The millions of Android apps you know and love on your phone and tablet can now run on your Chrome device without compromising their speed.",
           price: "$59.11",
           url: image3
         },
