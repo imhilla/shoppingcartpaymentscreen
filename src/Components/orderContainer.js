@@ -11,7 +11,7 @@ import Total from './Total';
 
 function OrderContainer() {
   const [data, setData] = useState(0)
-  const [subtotal, setSubtotal] = useState([])
+  const [subtotal, setSubtotal] = useState(0)
   const [total, setTotal] = useState(0)
   const [taxes, setTaxes] = useState(5.51)
   const [shipping, setShipping] = useState(3.23)
@@ -53,15 +53,16 @@ function OrderContainer() {
   }, []);
 
   useEffect(() => {
+    const arr = []
     if (data) {
       data.cart.forEach((element) => {
-       subtotal.push(parseFloat(element.price.replace(/\$/g, ''))) 
+        arr.push(parseFloat(element.price.replace(/\$/g, '')))
       })
     }
-    const sum = subtotal.reduce((accumulator, element) => {
+    const sum = arr.reduce((accumulator, element) => {
       return accumulator + element;
     }, 0);
-    console.log(sum)
+    setSubtotal(sum)
   })
 
   const items = data ? (
