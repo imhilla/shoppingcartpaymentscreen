@@ -10,7 +10,11 @@ import Total from './Total';
 
 
 function OrderContainer() {
-  const [data, setData] = useState('')
+  const [data, setData] = useState(0)
+  const [subtotal, setSubtotal] = useState(0)
+  const [total, setTotal] = useState(0)
+  const [taxes, setTaxes] = useState(5.51)
+  const [shipping, setShipping] = useState(3.23)
 
   useEffect(() => {
     const mydata = {
@@ -48,6 +52,10 @@ function OrderContainer() {
     setData(mydata);
   }, []);
 
+  useEffect(() => {
+    console.log(data)
+  })
+
   const items = data ? (
     <div>
       {data.cart.map(element => (
@@ -78,7 +86,12 @@ function OrderContainer() {
       <ItemContainer>
         {items}
       </ItemContainer>
-      <Total />
+      <Total
+        subtotal={subtotal}
+        shipping={shipping}
+        taxes={taxes}
+        total={total}
+      />
     </Wrapper>
   )
 }
