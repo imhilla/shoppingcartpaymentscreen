@@ -14,7 +14,7 @@ function OrderContainer({ mydata }) {
 
   useEffect(() => {
     setData(mydata);
-  }, []);
+  }, [mydata]);
 
   useEffect(() => {
     const arr = []
