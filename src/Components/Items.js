@@ -8,6 +8,13 @@ import { add, minus } from '../features/cartSlice';
 
 function Items({ url, name, price, subinformation }) {
   const [mynumber, setNumber] = useState(1)
+  const [myprice, setPrice] = useState(price)
+
+  const minus = ()=>{
+    if(mynumber > 1){
+      setNumber(mynumber - 1)
+    }
+  }
 
   return (
     <Wrapper>
@@ -21,13 +28,13 @@ function Items({ url, name, price, subinformation }) {
         </SubInfo>
       </ItemContainer>
       <AddMin>
-        <MyMinusCircle onClick={(() => { setNumber(mynumber - 1)})} />
+        <MyMinusCircle onClick={(() => { minus()})} />
         <Number>{mynumber}</Number>
         <MyPlusCircle onClick={(() => { setNumber(mynumber + 1) })} />
       </AddMin>
       <Miniwrapper>
         <Price>
-          {price}
+          {'$' + (myprice.replace(/\$/g, '') * mynumber).toFixed(2)}
         </Price>
         <Mydelete />
       </Miniwrapper>
