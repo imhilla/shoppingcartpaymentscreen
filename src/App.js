@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import Credit from './Components/credit';
 import OrderContainer from './Components/orderContainer';
-import { useSelector } from 'react-redux'
+import { useSelector } from 'react-redux';
 
 function App() {
   const mydata = useSelector((state)=> state.cart)

@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import { PlusCircle } from '@styled-icons/boxicons-regular/PlusCircle';
 import { MinusCircle } from '@styled-icons/boxicons-regular/MinusCircle';
 import { Delete } from '@styled-icons/fluentui-system-filled/Delete';
+import { useDispatch, useSelector } from 'react-redux';
+import { add, minus } from '../features/cartSlice';
 
 function Items({ url, name, price, subinformation }) {
   const [mynumber, setNumber] = useState(1)
@@ -19,9 +21,9 @@ function Items({ url, name, price, subinformation }) {
         </SubInfo>
       </ItemContainer>
       <AddMin>
-        <MyMinusCircle />
+        <MyMinusCircle onClick={(() => { setNumber(mynumber - 1)})} />
         <Number>{mynumber}</Number>
-        <MyPlusCircle />
+        <MyPlusCircle onClick={(() => { setNumber(mynumber + 1) })} />
       </AddMin>
       <Miniwrapper>
         <Price>
