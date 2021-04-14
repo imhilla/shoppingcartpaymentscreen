@@ -1,13 +1,10 @@
 import styled from 'styled-components';
 import Credit from './Components/credit';
 import OrderContainer from './Components/orderContainer';
-import image1 from './images/image1.jpg';
-import image2 from './images/image2.jpg';
-import image3 from './images/image3.jpg';
-import image4 from './images/image4.jpg';
+import { useSelector } from 'react-redux'
 
 function App() {
-  const mydata = {cart: []}
+  const mydata = useSelector((state)=> state.cart)
   return (
     <Wrapper className="App">
       <OrderContainer mydata={mydata} />
